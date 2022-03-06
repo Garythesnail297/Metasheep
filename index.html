@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MetaSheep</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="roadmap.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Staatliches&display=swap"
+        rel="stylesheet">
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+    <div id="content">
+        <img class="background" src="img/bg.svg" />
+        <header>
+            <div class="header-left">
+                <div><a class="active" href="#">Home</a></div>
+                <div><a href="#about">About</a></div>
+                <div><a href="#roadmap">Roadmap</a></div>
+            </div>
+
+            <div class="header-mid">
+                <img src="./img/logo.png" id="logo" alt="Logo Metasheep">
+            </div>
+            <div class="header-right">
+                <div>
+                    <a href="#team">Team</a>
+                </div>
+                <a class="button" href="#">
+                    <svg class="ico" viewBox="0 0 15 14">
+                        <title>Twitter</title>
+                        <path
+                            d="M15 1.5059C14.5683 2.19615 14.0288 2.77135 13.4892 3.23151C13.4892 3.34655 13.4892 3.46159 13.4892 3.69167C13.4892 4.612 13.3813 5.53232 13.1655 6.3376C12.9496 7.25793 12.518 8.06321 12.0863 8.8685C11.5468 9.67378 11.0072 10.364 10.3597 11.0543C9.60431 11.7445 8.74101 12.2047 7.8777 12.5498C6.90647 12.8949 5.82734 13.125 4.7482 13.125C3.02158 13.125 1.40288 12.5498 0 11.6295C0.215827 11.6295 0.431655 11.6295 0.755396 11.6295C2.15827 11.6295 3.56115 11.1693 4.64029 10.249C3.9928 10.249 3.34532 10.0189 2.80575 9.55874C2.26619 9.09858 1.94244 8.63842 1.72662 7.94817C1.94244 7.94817 2.15827 7.94817 2.26619 7.94817C2.58993 7.94817 2.80576 7.94817 3.1295 7.83313C2.48202 7.71809 1.83453 7.25793 1.40288 6.68273C0.755395 6.10752 0.539568 5.41728 0.539568 4.612C0.971223 4.84208 1.51079 4.95712 1.94245 5.07216C1.51079 4.72704 1.18705 4.38192 0.863308 3.92175C0.647481 3.46159 0.431654 2.88639 0.431654 2.31118C0.431654 1.73598 0.539567 1.16078 0.863308 0.700617C1.6187 1.73598 2.58993 2.54127 3.66907 3.11647C4.7482 3.69167 5.93525 4.03679 7.23022 4.15183C7.23022 3.92175 7.1223 3.69167 7.1223 3.34655C7.1223 2.65631 7.33813 2.0811 7.66187 1.5059C7.98561 0.930699 8.52518 0.585576 9.06475 0.240455C9.60432 0.0103735 10.2518 -0.104668 10.8993 0.125414C11.5468 0.240454 12.0863 0.585577 12.518 1.04574C13.1655 0.930699 13.9209 0.700617 14.4604 0.240455C14.2446 1.04574 13.705 1.62094 13.0576 2.0811C13.8129 1.96606 14.4604 1.85102 15 1.5059Z">
+                        </path>
+                        </path>
+                    </svg></a>
+                <a class="button disabled" href="#">
+                    <svg class="ico" viewBox="0 0 18 14">
+                        <title>Discord</title>
+                        <path
+                            d="M15.1374 1.3923C13.9928 0.865212 12.769 0.48215 11.4895 0.26403C11.3323 0.543652 11.1488 0.919748 11.0222 1.21893C9.66206 1.01761 8.31444 1.01761 6.97932 1.21893C6.85278 0.919748 6.66503 0.543652 6.50649 0.26403C5.22562 0.48215 4.00038 0.86662 2.8558 1.39509C0.54718 4.82877 -0.0786491 8.17716 0.234266 11.478C1.76546 12.6035 3.24938 13.2871 4.70825 13.7345C5.06846 13.2466 5.38971 12.7279 5.66646 12.1812C5.13938 11.9841 4.63455 11.7409 4.15754 11.4584C4.28408 11.3662 4.40787 11.2697 4.52746 11.1704C7.43687 12.5098 10.598 12.5098 13.4727 11.1704C13.5937 11.2697 13.7174 11.3662 13.8426 11.4584C13.3642 11.7422 12.858 11.9855 12.3309 12.1827C12.6076 12.7279 12.9275 13.248 13.2891 13.7359C14.7494 13.2885 16.2347 12.6049 17.7659 11.478C18.133 7.65148 17.1386 4.33384 15.1374 1.3923ZM6.06283 9.44802C5.18945 9.44802 4.47322 8.64551 4.47322 7.66825C4.47322 6.691 5.17416 5.88711 6.06283 5.88711C6.95152 5.88711 7.66774 6.68959 7.65244 7.66825C7.65383 8.64551 6.95152 9.44802 6.06283 9.44802ZM11.9373 9.44802C11.0639 9.44802 10.3477 8.64551 10.3477 7.66825C10.3477 6.691 11.0486 5.88711 11.9373 5.88711C12.826 5.88711 13.5422 6.68959 13.5269 7.66825C13.5269 8.64551 12.826 9.44802 11.9373 9.44802Z">
+                        </path>
+                        </path>
+                    </svg></a>
+
+                <a id="wallet-button" class="button disabled" href="/#">
+                    <svg class="ico" viewBox="0 0 18 17">
+                        <title>Opensea</title>
+                        <path
+                            d="M6.1296 6.47114L4.13391 5.55174C4.09828 5.51638 4.027 5.55174 3.99137 5.62247L1.92441 10.8913C1.88877 10.962 1.96005 11.0328 2.03132 11.0328H6.09396C6.16524 11.0328 6.20087 10.9974 6.20087 10.9267V6.54186C6.20087 6.5065 6.16524 6.47114 6.1296 6.47114ZM17.9255 11.8107C17.8542 11.74 17.7473 11.74 17.6404 11.7754L17.391 11.8814C16.1793 12.4826 14.8251 12.7655 13.4709 12.7655C13.3996 12.7655 13.3639 12.8008 13.3639 12.8362C13.2214 13.4727 12.6868 13.9324 12.0097 13.9324H9.23004V11.6339H9.26567C9.44386 11.6693 9.58641 11.6693 9.76459 11.7046C10.9406 11.8814 11.5108 12.4119 11.7603 12.6594L11.7959 12.6947C11.8315 12.7301 11.9028 12.7301 11.9385 12.6947C11.9741 12.6594 12.0097 12.624 12.081 12.5887C12.5087 12.3058 13.5065 11.7046 13.5065 8.5221C13.5065 5.26885 11.0119 3.07644 10.7268 2.935L9.26567 2.82891H9.23004V1.90952C9.51513 1.73271 9.72896 1.41446 9.72896 1.02548C9.72896 0.459699 9.30131 0 8.73111 0C8.16092 0 7.73327 0.459699 7.73327 1.02548C7.73327 1.3791 7.91146 1.69735 8.23219 1.87416V2.65211L6.1296 2.43994C6.02269 2.43994 5.95141 2.54602 6.02269 2.61674C6.37906 3.18253 7.34126 4.9506 7.41254 7.6027C7.48381 10.078 7.0918 11.2449 6.91362 11.6693C6.87798 11.7046 6.87798 11.74 6.91362 11.7754C6.94925 11.8107 6.98489 11.8107 7.02053 11.8107C7.26999 11.7754 7.69763 11.7046 8.23219 11.6693V13.9678H5.91577C5.16739 13.9678 4.52593 13.3313 4.52593 12.5887V12.0229C4.52593 11.9522 4.49029 11.9168 4.41901 11.9168H0.106911C0.0712741 11.9168 0 11.9522 0 12.0229C0 12.129 0 12.235 0 12.3411C0 13.9324 0.463284 15.3822 1.2473 16.6552C1.38985 16.8674 1.63931 16.9735 1.85313 16.8674L2.31642 16.6552C2.67279 16.4784 3.10044 16.4784 3.49245 16.6552L3.99137 16.8674C4.34774 17.0442 4.77538 17.0442 5.16739 16.8674L5.66632 16.6552C6.05832 16.4784 6.45033 16.4784 6.84234 16.6552L7.34126 16.8674C7.73327 17.0442 8.12528 17.0442 8.51729 16.8674L9.01621 16.6552C9.40822 16.4784 9.80023 16.4784 10.1922 16.6552L10.6912 16.8674C11.0832 17.0442 11.4752 17.0442 11.8672 16.8674L12.3661 16.6552C12.7581 16.4784 13.1501 16.4784 13.5421 16.6552L14.0411 16.8674C14.3618 17.0088 14.7182 16.832 14.8964 16.5138C15.1814 16.0541 15.4309 15.5237 15.6091 15.0286C16.0011 13.8617 16.7138 12.7655 17.8186 12.235C17.9255 12.1997 17.9611 12.0936 17.9611 11.9875C18.0324 11.9522 17.9968 11.8461 17.9255 11.8107Z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </header>
+
+        <div class="page">
+            <div class="section">
+                <div id="home" class="flex-row">
+                    <div class="flex-col">
+                        <img id="first-image" src="img/sheep-4.jpg" alt="Sheep">
+                        <img id="second-image" src="img/sheep-1.png" alt="Sheep">
+                    </div>
+                    <div class="text">
+                        <div id="home-title" class="title">
+                            <span class="red">META</span><span class="dark">SHEEP</span>
+                        </div>
+                        <div id="home-description" class="description">
+                            5k unique collectible adorable Sheep, stored on the Ethereum blockchain as ERC-721 standard
+                            tokens, being compatible with all exchanges.
+                            Metasheep are “Non-Fungible Tokens”, meaning no central entity can take them away from you.
+                            <br>
+                            <br>
+                            Despite this standardization this collection has an unique twist ; )
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div id="about" class="flex-col">
+                    <div class="title center" id="about-title">
+                        <span class="red">ABOUT </span><span class="dark">THE PROJECT</span>
+                    </div>
+                    <div class="flex-row">
+
+                        <img id="about-image" src="img/sheep-3.png" alt="Sheep">
+                        <div class="text">
+                            <div class="description" id="about-description">
+                                Metasheep are an up and coming NFT collection with a twist.
+                                <br>
+                                <span class="hl"> Each Sheep is unique</span>, generated through <span class="hl">over
+                                    100 hand drawn
+                                    traits</span>.
+                                <br>
+                                Owning a Metasheep allows you to partake in <span class="hl">exclusive games and events
+                                    with Ethereum
+                                    prizes</span>, derived through a percentage of the minting pool.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div id="roadmap">
+                    <div class="title center">
+                        <span class="red">ROAD</span><span class="dark">MAP</span>
+                    </div>
+                    <div class="for-large">
+                        <div class='progress'>
+                            <div class='progress_inner'>
+                                <div class='progress_inner__step'>
+                                    <label for='step-1'>Launch Project</label>
+                                </div>
+                                <div class='progress_inner__step'>
+                                    <label for='step-2'>Discord and whitelist open</label>
+                                </div>
+                                <div class='progress_inner__step'>
+                                    <label for='step-3'>Presale</label>
+                                </div>
+                                <div class='progress_inner__step'>
+                                    <label for='step-4'>Public mint</label>
+                                </div>
+                                <div class='progress_inner__step'>
+                                    <label for='step-5'>Challenges start</label>
+                                </div>
+                                <input checked='checked' id='step-1' name='step' type='radio'>
+                                <input id='step-2' name='step' type='radio'>
+                                <input id='step-3' name='step' type='radio'>
+                                <input id='step-4' name='step' type='radio'>
+                                <input id='step-5' name='step' type='radio'>
+                                <div class='progress_inner__bar'></div>
+                                <div class='progress_inner__bar--set'></div>
+                                <div class='progress_inner__tabs'>
+                                    <div class='tab tab-0'>
+                                        <h1>Launch Project</h1>
+                                        <p>Metasheep’s Twitter has been released and we are building a community that
+                                            believes in the project! Also, during this time Garythesnail will reveal
+                                            some
+                                            collabs for the project.
+                                        </p>
+                                    </div>
+                                    <div class='tab tab-1'>
+                                        <h1>Discord and whitelist open</h1>
+                                        <p>When the Twitter gets to 5000 followers, the discord will be opened and the
+                                            first
+                                            100 to join it get an instant whitelist. Then, whitelists will be given
+                                            throughout the community in challenges or to people that are active and
+                                            believe
+                                            in the project! The Discord will have mods which will pick people who
+                                            deserve a
+                                            whitelist in the project!</p>
+                                    </div>
+                                    <div class='tab tab-2'>
+                                        <h1>Presale</h1>
+                                        <p>When the whitelist is full, the presale date will be announced! Anyone who is
+                                            whitelisted will be able to mint an amount of sheeps that will be revealed
+                                            during this phase. The mint price will also be decided by this point.</p>
+                                    </div>
+                                    <div class='tab tab-3'>
+                                        <h1>Public mint</h1>
+                                        <p>All the sheeps remaining after the presale will be released for public mint
+                                            where
+                                            people can buy them for the same price as in presale. The public mint will
+                                            be
+                                            exactly 24 hours after the presale.</p>
+                                    </div>
+                                    <div class='tab tab-4'>
+                                        <h1>Challenges start</h1>
+                                        <p>Anyone who owns a Sheep will be instantly registered to ETH giveaways! Also,
+                                            the NFT will act as a ticket letting you enter challenges with the community
+                                            to win prizes such as ETH, whitelist or even NFTs!</p>
+                                    </div>
+                                </div>
+                                <div class='progress_inner__status'></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="for-small">
+
+                        <ul class="timeline">
+                            <li class="event">
+                                <h3>Launch Project</h3>
+                                <p>Metasheep’s Twitter has been released and we are building a community that
+                                    believes in the project! Also, during this time Garythesnail will reveal some
+                                    collabs for the project.</p>
+                            </li>
+                            <li class="event">
+                                <h3>Discord and whitelist open</h3>
+                                <p>When the Twitter gets to 5000 followers, the discord will be opened and the
+                                    first
+                                    100 to join it get an instant whitelist. Then, whitelists will be given
+                                    throughout the community in challenges or to people that are active and
+                                    believe
+                                    in the project! The Discord will have mods which will pick people who
+                                    deserve a
+                                    whitelist in the project!</p>
+                            </li>
+                            <li class="event">
+                                <h3>Presale</h3>
+                                <p>When the whitelist is full, the presale date will be announced! Anyone who is
+                                    whitelisted will be able to mint an amount of sheeps that will be revealed
+                                    during this phase. The mint price will also be decided by this point.</p>
+                            </li>
+                            <li class="event">
+                                <h3>Public mint</h3>
+                                <p>All the sheeps remaining after the presale will be released for public mint
+                                    where
+                                    people can buy them for the same price as in presale. The public mint will
+                                    be
+                                    exactly 24 hours after the presale.</p>
+                            </li>
+                            <li class="event">
+                                <h3>Challenges start</h3>
+                                <p>Anyone who owns a Sheep will be instantly registered to ETH giveaways! Also,
+                                    the NFT will act as a ticket letting you enter challenges with the community
+                                    to win prizes such as ETH, whitelist or even NFTs.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="section">
+                <div id="team" class="flex-col">
+                    <div class="title center" id="team-title">
+                        <span class="red">THE</span><span class="dark"> TEAM</span>
+                    </div>
+                    <div class="flex-col g3em">
+                        <div class="profile flex-row">
+                            <div class="bordered" id="team-1-img">
+                                <img src="img/sheep-gary.png" alt="Sheep">
+                                <img class="border" src="img/cloud-border.png" alt="Sheep">
+                            </div>
+                            <div class="text" id="team-description-1">
+                                <div class="title">
+                                    <span class="red">GARY</span><span class="dark">THE</span><span
+                                        class="red">SNAIL</span>
+                                </div>
+                                <div class="description">
+                                    Garythesnail is a Canadian marketing student and the founder of Metasheep. As
+                                    you
+                                    can see by his name, he loves SpongeBob and was inspired by the show in the
+                                    making
+                                    of Metasheep. He has experience with other projects and has been in the crypto
+                                    industry for well over a year now! He is now trying out his chance in this
+                                    industry
+                                    hoping to make YOU the next entrepreneur!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile flex-row">
+                            <div class="text" id="team-description-2">
+                                <div class="title">
+                                    <span class="red">BEN</span><span class="dark">10</span><span </div>
+                                </div>
+                                <div class="description">
+                                    Ben is a young visual art worker and graphic designer. He worked for
+                                    Nintendo in his
+                                    younger days. He distinguishes himself due to his art style which is
+                                    quite
+                                    simple
+                                    but really expressive. He is drawing all the accessories that your sheep
+                                    will wear!
+                                    (He also wanted to mention that he loves the NBA)
+                                </div>
+                            </div>
+                            <div class="bordered" id="team-2-img">
+                                <img src="img/sheep-b10.jpg" alt="Sheep">
+                                <img class="border" src="img/cloud-border.png" alt="Sheep">
+                            </div>
+                        </div>
+                        <div class="profile flex-row">
+
+                            <div class="bordered" id="team-3-img">
+                                <img src="img/sheep-roris.png" alt="Sheep">
+                                <img class="border" src="img/cloud-border.png" alt="Sheep">
+                            </div>
+                            <div class="text" id="team-description-3">
+                                <div class="title">
+                                    <span class="red">RORIS</span>
+                                </div>
+                                <div class="description">
+                                    A Computer Science Student, passionate about the web3 and distributed
+                                    decentralized
+                                    systems, such as the ones in use in NFT/Crypto!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile flex-row">
+                            <div class="text" id="team-description-4">
+                                <div class="title">
+                                    <span class="red">???</span><span class="dark">???</span>
+                                </div>
+                                <div class="description">
+                                    Mystery web developer duoing with Roris to power the website.
+                                    Is a CompSci Masters student IRL interested in all things security and
+                                    cryptography.
+                                </div>
+                            </div>
+                            <div class="bordered" id="team-4-img">
+                                <img src="img/sheep-unk.png" alt="Sheep">
+                                <img class="border" src="img/cloud-border.png" alt="Sheep">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="icos">
+
+            <a class="button" href="/#">
+                <svg class="ico" viewBox="0 0 15 14">
+                    <title>Twitter</title>
+                    <path
+                        d="M15 1.5059C14.5683 2.19615 14.0288 2.77135 13.4892 3.23151C13.4892 3.34655 13.4892 3.46159 13.4892 3.69167C13.4892 4.612 13.3813 5.53232 13.1655 6.3376C12.9496 7.25793 12.518 8.06321 12.0863 8.8685C11.5468 9.67378 11.0072 10.364 10.3597 11.0543C9.60431 11.7445 8.74101 12.2047 7.8777 12.5498C6.90647 12.8949 5.82734 13.125 4.7482 13.125C3.02158 13.125 1.40288 12.5498 0 11.6295C0.215827 11.6295 0.431655 11.6295 0.755396 11.6295C2.15827 11.6295 3.56115 11.1693 4.64029 10.249C3.9928 10.249 3.34532 10.0189 2.80575 9.55874C2.26619 9.09858 1.94244 8.63842 1.72662 7.94817C1.94244 7.94817 2.15827 7.94817 2.26619 7.94817C2.58993 7.94817 2.80576 7.94817 3.1295 7.83313C2.48202 7.71809 1.83453 7.25793 1.40288 6.68273C0.755395 6.10752 0.539568 5.41728 0.539568 4.612C0.971223 4.84208 1.51079 4.95712 1.94245 5.07216C1.51079 4.72704 1.18705 4.38192 0.863308 3.92175C0.647481 3.46159 0.431654 2.88639 0.431654 2.31118C0.431654 1.73598 0.539567 1.16078 0.863308 0.700617C1.6187 1.73598 2.58993 2.54127 3.66907 3.11647C4.7482 3.69167 5.93525 4.03679 7.23022 4.15183C7.23022 3.92175 7.1223 3.69167 7.1223 3.34655C7.1223 2.65631 7.33813 2.0811 7.66187 1.5059C7.98561 0.930699 8.52518 0.585576 9.06475 0.240455C9.60432 0.0103735 10.2518 -0.104668 10.8993 0.125414C11.5468 0.240454 12.0863 0.585577 12.518 1.04574C13.1655 0.930699 13.9209 0.700617 14.4604 0.240455C14.2446 1.04574 13.705 1.62094 13.0576 2.0811C13.8129 1.96606 14.4604 1.85102 15 1.5059Z">
+                    </path>
+                    </path>
+                </svg></a>
+            <a class="button disabled" href="/#">
+                <svg class="ico" viewBox="0 0 18 14">
+                    <title>Discord</title>
+                    <path
+                        d="M15.1374 1.3923C13.9928 0.865212 12.769 0.48215 11.4895 0.26403C11.3323 0.543652 11.1488 0.919748 11.0222 1.21893C9.66206 1.01761 8.31444 1.01761 6.97932 1.21893C6.85278 0.919748 6.66503 0.543652 6.50649 0.26403C5.22562 0.48215 4.00038 0.86662 2.8558 1.39509C0.54718 4.82877 -0.0786491 8.17716 0.234266 11.478C1.76546 12.6035 3.24938 13.2871 4.70825 13.7345C5.06846 13.2466 5.38971 12.7279 5.66646 12.1812C5.13938 11.9841 4.63455 11.7409 4.15754 11.4584C4.28408 11.3662 4.40787 11.2697 4.52746 11.1704C7.43687 12.5098 10.598 12.5098 13.4727 11.1704C13.5937 11.2697 13.7174 11.3662 13.8426 11.4584C13.3642 11.7422 12.858 11.9855 12.3309 12.1827C12.6076 12.7279 12.9275 13.248 13.2891 13.7359C14.7494 13.2885 16.2347 12.6049 17.7659 11.478C18.133 7.65148 17.1386 4.33384 15.1374 1.3923ZM6.06283 9.44802C5.18945 9.44802 4.47322 8.64551 4.47322 7.66825C4.47322 6.691 5.17416 5.88711 6.06283 5.88711C6.95152 5.88711 7.66774 6.68959 7.65244 7.66825C7.65383 8.64551 6.95152 9.44802 6.06283 9.44802ZM11.9373 9.44802C11.0639 9.44802 10.3477 8.64551 10.3477 7.66825C10.3477 6.691 11.0486 5.88711 11.9373 5.88711C12.826 5.88711 13.5422 6.68959 13.5269 7.66825C13.5269 8.64551 12.826 9.44802 11.9373 9.44802Z">
+                    </path>
+                    </path>
+                </svg></a>
+
+        </div>
+
+        <div class="title">
+            <span class="red">META</span><span class="dark">SHEEP</span>
+        </div>
+    </footer>
+    <svg class="icons" style="position: absolute; width: 0px; height: 0px; overflow: hidden;">
+        <filter id="turbulence" x="0" y="0" width="100%" height="100%" transform-origin="center">
+            <feTurbulence id="sea-filter" numOctaves="0.01" seed="2" baseFrequency="0.01" type="fractalNoise">
+            </feTurbulence>
+            <feDisplacementMap scale="50" in="SourceGraphic"></feDisplacementMap>
+            <animate xlink:href="#sea-filter" attributeName="baseFrequency" dur="60s" keyTimes="0;0.5;1"
+                values="0.01 0.02;0.015 0.03;0.01 0.02" repeatCount="indefinite"></animate>
+        </filter>
+        <symbol id="icon-twitter" viewBox="0 0 15 14">
+            <title>Twitter</title>
+            <path
+                d="M15 1.5059C14.5683 2.19615 14.0288 2.77135 13.4892 3.23151C13.4892 3.34655 13.4892 3.46159 13.4892 3.69167C13.4892 4.612 13.3813 5.53232 13.1655 6.3376C12.9496 7.25793 12.518 8.06321 12.0863 8.8685C11.5468 9.67378 11.0072 10.364 10.3597 11.0543C9.60431 11.7445 8.74101 12.2047 7.8777 12.5498C6.90647 12.8949 5.82734 13.125 4.7482 13.125C3.02158 13.125 1.40288 12.5498 0 11.6295C0.215827 11.6295 0.431655 11.6295 0.755396 11.6295C2.15827 11.6295 3.56115 11.1693 4.64029 10.249C3.9928 10.249 3.34532 10.0189 2.80575 9.55874C2.26619 9.09858 1.94244 8.63842 1.72662 7.94817C1.94244 7.94817 2.15827 7.94817 2.26619 7.94817C2.58993 7.94817 2.80576 7.94817 3.1295 7.83313C2.48202 7.71809 1.83453 7.25793 1.40288 6.68273C0.755395 6.10752 0.539568 5.41728 0.539568 4.612C0.971223 4.84208 1.51079 4.95712 1.94245 5.07216C1.51079 4.72704 1.18705 4.38192 0.863308 3.92175C0.647481 3.46159 0.431654 2.88639 0.431654 2.31118C0.431654 1.73598 0.539567 1.16078 0.863308 0.700617C1.6187 1.73598 2.58993 2.54127 3.66907 3.11647C4.7482 3.69167 5.93525 4.03679 7.23022 4.15183C7.23022 3.92175 7.1223 3.69167 7.1223 3.34655C7.1223 2.65631 7.33813 2.0811 7.66187 1.5059C7.98561 0.930699 8.52518 0.585576 9.06475 0.240455C9.60432 0.0103735 10.2518 -0.104668 10.8993 0.125414C11.5468 0.240454 12.0863 0.585577 12.518 1.04574C13.1655 0.930699 13.9209 0.700617 14.4604 0.240455C14.2446 1.04574 13.705 1.62094 13.0576 2.0811C13.8129 1.96606 14.4604 1.85102 15 1.5059Z"
+                fill="#A092E5"></path>
+        </symbol>
+        <symbol id="icon-discord" viewBox="0 0 18 14">
+            <title>Discord</title>
+            <path
+                d="M15.1374 1.3923C13.9928 0.865212 12.769 0.48215 11.4895 0.26403C11.3323 0.543652 11.1488 0.919748 11.0222 1.21893C9.66206 1.01761 8.31444 1.01761 6.97932 1.21893C6.85278 0.919748 6.66503 0.543652 6.50649 0.26403C5.22562 0.48215 4.00038 0.86662 2.8558 1.39509C0.54718 4.82877 -0.0786491 8.17716 0.234266 11.478C1.76546 12.6035 3.24938 13.2871 4.70825 13.7345C5.06846 13.2466 5.38971 12.7279 5.66646 12.1812C5.13938 11.9841 4.63455 11.7409 4.15754 11.4584C4.28408 11.3662 4.40787 11.2697 4.52746 11.1704C7.43687 12.5098 10.598 12.5098 13.4727 11.1704C13.5937 11.2697 13.7174 11.3662 13.8426 11.4584C13.3642 11.7422 12.858 11.9855 12.3309 12.1827C12.6076 12.7279 12.9275 13.248 13.2891 13.7359C14.7494 13.2885 16.2347 12.6049 17.7659 11.478C18.133 7.65148 17.1386 4.33384 15.1374 1.3923ZM6.06283 9.44802C5.18945 9.44802 4.47322 8.64551 4.47322 7.66825C4.47322 6.691 5.17416 5.88711 6.06283 5.88711C6.95152 5.88711 7.66774 6.68959 7.65244 7.66825C7.65383 8.64551 6.95152 9.44802 6.06283 9.44802ZM11.9373 9.44802C11.0639 9.44802 10.3477 8.64551 10.3477 7.66825C10.3477 6.691 11.0486 5.88711 11.9373 5.88711C12.826 5.88711 13.5422 6.68959 13.5269 7.66825C13.5269 8.64551 12.826 9.44802 11.9373 9.44802Z"
+                fill="#A092E5"></path>
+        </symbol>
+        <symbol id="icon-opensea" viewBox="0 0 18 17">
+            <title>Opensea</title>
+            <path
+                d="M6.1296 6.47114L4.13391 5.55174C4.09828 5.51638 4.027 5.55174 3.99137 5.62247L1.92441 10.8913C1.88877 10.962 1.96005 11.0328 2.03132 11.0328H6.09396C6.16524 11.0328 6.20087 10.9974 6.20087 10.9267V6.54186C6.20087 6.5065 6.16524 6.47114 6.1296 6.47114ZM17.9255 11.8107C17.8542 11.74 17.7473 11.74 17.6404 11.7754L17.391 11.8814C16.1793 12.4826 14.8251 12.7655 13.4709 12.7655C13.3996 12.7655 13.3639 12.8008 13.3639 12.8362C13.2214 13.4727 12.6868 13.9324 12.0097 13.9324H9.23004V11.6339H9.26567C9.44386 11.6693 9.58641 11.6693 9.76459 11.7046C10.9406 11.8814 11.5108 12.4119 11.7603 12.6594L11.7959 12.6947C11.8315 12.7301 11.9028 12.7301 11.9385 12.6947C11.9741 12.6594 12.0097 12.624 12.081 12.5887C12.5087 12.3058 13.5065 11.7046 13.5065 8.5221C13.5065 5.26885 11.0119 3.07644 10.7268 2.935L9.26567 2.82891H9.23004V1.90952C9.51513 1.73271 9.72896 1.41446 9.72896 1.02548C9.72896 0.459699 9.30131 0 8.73111 0C8.16092 0 7.73327 0.459699 7.73327 1.02548C7.73327 1.3791 7.91146 1.69735 8.23219 1.87416V2.65211L6.1296 2.43994C6.02269 2.43994 5.95141 2.54602 6.02269 2.61674C6.37906 3.18253 7.34126 4.9506 7.41254 7.6027C7.48381 10.078 7.0918 11.2449 6.91362 11.6693C6.87798 11.7046 6.87798 11.74 6.91362 11.7754C6.94925 11.8107 6.98489 11.8107 7.02053 11.8107C7.26999 11.7754 7.69763 11.7046 8.23219 11.6693V13.9678H5.91577C5.16739 13.9678 4.52593 13.3313 4.52593 12.5887V12.0229C4.52593 11.9522 4.49029 11.9168 4.41901 11.9168H0.106911C0.0712741 11.9168 0 11.9522 0 12.0229C0 12.129 0 12.235 0 12.3411C0 13.9324 0.463284 15.3822 1.2473 16.6552C1.38985 16.8674 1.63931 16.9735 1.85313 16.8674L2.31642 16.6552C2.67279 16.4784 3.10044 16.4784 3.49245 16.6552L3.99137 16.8674C4.34774 17.0442 4.77538 17.0442 5.16739 16.8674L5.66632 16.6552C6.05832 16.4784 6.45033 16.4784 6.84234 16.6552L7.34126 16.8674C7.73327 17.0442 8.12528 17.0442 8.51729 16.8674L9.01621 16.6552C9.40822 16.4784 9.80023 16.4784 10.1922 16.6552L10.6912 16.8674C11.0832 17.0442 11.4752 17.0442 11.8672 16.8674L12.3661 16.6552C12.7581 16.4784 13.1501 16.4784 13.5421 16.6552L14.0411 16.8674C14.3618 17.0088 14.7182 16.832 14.8964 16.5138C15.1814 16.0541 15.4309 15.5237 15.6091 15.0286C16.0011 13.8617 16.7138 12.7655 17.8186 12.235C17.9255 12.1997 17.9611 12.0936 17.9611 11.9875C18.0324 11.9522 17.9968 11.8461 17.9255 11.8107Z"
+                fill="#A092E5"></path>
+        </symbol>
+        <symbol id="icon-diamond" viewBox="0 0 20 20">
+            <title>Diamond</title>
+            <path d="M10 0L20 10L10 20L0 10L10 0Z" fill="#3BB9FF"></path>
+        </symbol>
+        <symbol id="icon-triangle" viewBox="0 0 20 10">
+            <title>Triangle</title>
+            <path d="M0 0H20L10 10L0 0Z" fill="#3BB9FF"></path>
+        </symbol>
+        <symbol id="icon-less" viewBox="0 0 11 3">
+            <title>Less</title>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M10.9927 0.992729L1.00738 0.992676L0.992676 2.99273L10.9927 2.99273L10.9927 0.992729Z"
+                fill="#A092E5"></path>
+        </symbol>
+        <symbol id="icon-more" viewBox="0 0 11 10">
+            <title>More</title>
+            <path
+                d="M4.99265 3.99264L4.99268 0H6.99268L6.99268 3.99265L10.9927 3.99268V5.99268L6.99268 5.99268L6.99268 10L4.99262 9.9853L4.99264 5.99268L0.992676 5.99268L1.00738 3.99262L4.99265 3.99264Z"
+                fill="#A092E5"></path>
+        </symbol>
+        <symbol id="icon-fullscreen" viewBox="0 0 18 18">
+            <title>Fullscreen</title>
+            <path d="M12 2H16V6H18V0H12V2Z" fill="#A092E5"></path>
+            <path d="M6 2V0H0V6H2V2H6Z" fill="#A092E5"></path>
+            <path d="M2 12H0V18H6V16H2V12Z" fill="#A092E5"></path>
+            <path d="M12 16V18H18V12H16V16H12Z" fill="#A092E5"></path>
+        </symbol>
+        <symbol id="icon-arrow" viewBox="0 0 10 14">
+            <title>Arrow</title>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M6.18596 6.99995L0.893066 1.70706L2.30728 0.292847L9.01439 6.99995L2.30728 13.7071L0.893066 12.2928L6.18596 6.99995Z">
+            </path>
+        </symbol>
+        <symbol id="icon-ice-border" width="100%" height="50px" viewBox="0 0 10 14" preserveAspectRatio="none">
+            <title>Ice Border</title>
+            <path
+                d="M83 0.5L55 6.4761L22.5 1.99402L6 6.9741L0 35.3606L6 54.7829L0.5 75.2012L6 120.52L36 123.01L66.5 120.52L87 125.5L137.5 120.52L198 125.5L246 120.52L252 90.6394L247 70.2211L251 40.8386L246 6.9741L239 1.49602L156.5 6.4761L149.5 3.48805L134 6.4761L83 0.5Z"
+                fill="#0D1730"></path>
+        </symbol>
+        <symbol id="icon-info" viewBox="0 0 4 21">
+            <title>Info</title>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M2 0C0.895431 0 0 0.89543 0 2V12C0 13.1046 0.895431 14 2 14C3.10457 14 4 13.1046 4 12V2C4 0.895431 3.10457 0 2 0ZM2 17C0.895431 17 0 17.8954 0 19C0 20.1046 0.895431 21 2 21C3.10457 21 4 20.1046 4 19C4 17.8954 3.10457 17 2 17Z">
+            </path>
+        </symbol>
+        <symbol id="icon-sucess" viewBox="0 0 21 15">
+            <title>Sucess</title>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M19.4666 1.41422C18.6856 0.633167 17.4193 0.633167 16.6382 1.41422L8.15112 9.90131L4.24234 5.99253C3.46129 5.21148 2.19496 5.21148 1.41391 5.99253C0.632862 6.77358 0.632862 8.03991 1.41391 8.82096L6.36366 13.7707C6.4293 13.8363 6.49837 13.8965 6.57029 13.9511C6.62169 14.0174 6.67783 14.0812 6.73872 14.1421C7.51977 14.9232 8.7861 14.9232 9.56715 14.1421L19.4666 4.24265C20.2477 3.4616 20.2477 2.19527 19.4666 1.41422Z">
+            </path>
+        </symbol>
+        <symbol id="icon-cross" viewBox="0 0 16 16">
+            <title>Cross</title>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M3.06066 0.93934C2.47487 0.353553 1.52513 0.353553 0.93934 0.93934C0.353553 1.52513 0.353553 2.47487 0.93934 3.06066L5.87868 8L0.939341 12.9393C0.353554 13.5251 0.353554 14.4749 0.939341 15.0607C1.52513 15.6464 2.47487 15.6464 3.06066 15.0607L8 10.1213L12.9393 15.0607C13.5251 15.6464 14.4749 15.6464 15.0607 15.0607C15.6464 14.4749 15.6464 13.5251 15.0607 12.9393L10.1213 8L15.0607 3.06066C15.6464 2.47487 15.6464 1.52513 15.0607 0.93934C14.4749 0.353553 13.5251 0.353553 12.9393 0.93934L8 5.87868L3.06066 0.93934Z">
+            </path>
+        </symbol>
+        <symbol id="icon-error" viewBox="0 0 15 15">
+            <title>Error</title>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M14.1424 1.41422C13.3614 0.633169 12.095 0.633169 11.314 1.41422L7.77841 4.94981L4.24283 1.41422C3.46178 0.633172 2.19545 0.633172 1.4144 1.41422C0.633351 2.19527 0.633351 3.4616 1.4144 4.24265L4.94998 7.77823L1.41451 11.3137C0.633456 12.0948 0.633456 13.3611 1.41451 14.1421C2.19555 14.9232 3.46188 14.9232 4.24293 14.1421L7.77841 10.6067L11.3139 14.1421C12.0949 14.9232 13.3613 14.9232 14.1423 14.1421C14.9234 13.3611 14.9234 12.0948 14.1423 11.3137L10.6068 7.77823L14.1424 4.24264C14.9235 3.4616 14.9235 2.19527 14.1424 1.41422Z">
+            </path>
+        </symbol>
+    </svg>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+        integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="index.js"></script>
+    <script src="animations.js"></script>
+</body>
+
+</html>
